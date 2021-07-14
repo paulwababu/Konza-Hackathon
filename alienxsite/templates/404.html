@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nyakotey">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'assets/img/large.png' %}" type="image/x-icon">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;position:relative}::after,::before{content:'';position:absolute;box-sizing:border-box}body{display:flex;justify-content:center;align-items:center;height:100vh;overflow:hidden;font-family:Montserrat,sans-serif}main{top:-4vmin}.coffin{--light-brown:#fab373;--dark-brown:#b97341;--cream:#fdfd9c;--radius:1.5vmin;--bg:linear-gradient(var(--light-brown) 70%,var(--dark-brown) 30%);top:10.5vmin}.cover{width:18vmin;height:3vmin;background:var(--bg);border-radius:var(--radius);left:12%}.beam{width:24vmin;height:3vmin;background:var(--bg);border-radius:var(--radius)}.column{width:20vmin;height:8vmin;background:var(--light-brown);left:8.8%;border-bottom:1px solid rgba(185,115,65,.11)}#decor,.column::after,.column::before{width:2vmin;height:5vmin;background:var(--cream);border-radius:var(--radius);top:20%}.column::before{left:0}.Nyakotey::before{display:block}.column::after{right:0}#decor{width:5vmin;left:40%;background:0 0;border:2vmin inset var(--cream)}.man{--main:#666;--black:#222;--skin:#7f6657;top:-5.5vmin}.man1{left:-45%}.man2{left:80%;top:-41vmin}.head{left:10%}.hat{left:10%;width:10vmin;height:7vmin;background:var(--main);clip-path:polygon(50% 0,0 100%,100% 100%);border-radius:1vmin;border-bottom:1vmin solid #fff;z-index:1;box-shadow:0 0 5px rgba(0,0,0,.2)}.tete{background-color:var(--skin);width:7.3vmin;height:8vmin;border-radius:10% 10% 4vmin 4vmin/3vmin 3vmin 50% 50%;left:5%;top:-.9vmin}.sunglass{top:1vmin;left:4%;animation:glass 1s infinite alternate;z-index:1}.sunglass *{background:var(--black)}.s1,.s2{width:3.5vmin;height:3.5vmin;border-radius:20% 20% 50% 50%;position:absolute}.s2{left:17%;top:0}.bar{width:3vmin;height:.6vmin;left:10%;top:10%}.mouth{background:#49382b;width:3vmin;height:.6vmin;position:absolute;bottom:20%;left:30%}.shirt{background:var(--main);width:15vmin;height:20vmin;clip-path:polygon(0 0,100% 0,95% 100%,5% 100%)}.shirt:before{background:#fff;width:15vmin;height:20vmin;clip-path:polygon(30% 0,70% 0,60% 100%,40% 100%);box-shadow:0 0 5px rgba(0,0,0,.2)}#flag{position:absolute;right:10%;top:10%;font-size:.6rem}.upper-body::after{background:#5b5a5a;width:14vmin;height:4vmin;left:2%;bottom:-15%;z-index:1}.lower-body::before{background:#464343;width:5vmin;height:4.5vmin;border:1vmin solid #52605e;border-radius:50%;left:21%;top:-1.2vmin;z-index:1}.arm{position:absolute;top:-2%;z-index:21}.arm *,.leg *{background-color:var(--main)}.left-arm{left:-20%}.right-arm{right:20%}.upper-arm{width:4vmin;height:15vmin}.left-arm .upper-arm{left:20%;transform:rotate(15deg);border-radius:5vmin 0 3vmin 3vmin}.right-arm .upper-arm{right:20%;transform:rotate(-15deg);border-radius:0 5vmin 3vmin 3vmin}.forearm{top:-2vmin;width:3.7vmin;height:10vmin;border-radius:0 0 1.4vmin 1.4vmin/0 0 50% 50%;transform-origin:top;z-index:-1}.left-arm .forearm{left:-15%;transform:rotate(0);animation:lhand 1s 1s infinite alternate}.right-arm .forearm{right:-20%;transform:rotate(0);animation:rhand 1s ease infinite alternate;height:10vmin;border-radius:0 0 1.4vmin 1.4vmin/0 0 50% 50%}.hand{position:absolute;background:#fff;width:3.5vmin;height:3.5vmin;border-radius:20% 20% 50% 50%;bottom:-20%;box-shadow:0 0 5px rgba(0,0,0,.2)}.leg{position:absolute}.left-leg{left:18%}.right-leg{right:27%}.thigh{width:6.5vmin;height:13vmin;left:-50%;clip-path:polygon(0 0,100% 0,95% 100%,5% 100%)}.left-leg .thigh{animation:lthigh 1s infinite alternate}.right-leg .thigh{animation:rthigh 1s 1s infinite alternate}.crus{width:5.8vmin;height:15vmin;clip-path:polygon(0 0,100% 0,90% 100%,10% 100%);top:-.8vmin}.left-leg .crus{left:-45%;animation:lcrus 1s infinite alternate}.right-leg .crus{right:45%;animation:rcrus 1s 1s infinite alternate}.shoe{background:var(--black);width:8vmin;height:4vmin;position:absolute}.left-leg .shoe{border-radius:55% 0 10% 10%;right:62%;bottom:-11%;animation:lshoe 1s infinite alternate}.right-leg .shoe{border-radius:0 55% 10% 10%;right:18%;bottom:-11%;animation:rshoe 1s 1s infinite alternate}.shadow{position:absolute;left:-60%;bottom:3%;width:55vmin;height:5vmin;background:rgba(0,0,0,.2);border-radius:50%;animation:shadow 1s infinite alternate}footer{position:absolute;bottom:4%}a{font-weight:700;text-decoration:none;color:#ff0;padding:.7rem 1.5rem;background:rgba(0,0,0,.2)}.btn{background:rgba(0,0,0,.7);color:#fff;padding:1rem}@keyframes glass{from{left:-2%}to{left:9%}}@keyframes lhand{to{transform:rotate(-60deg)}}@keyframes rhand{to{transform:rotate(60deg)}}@keyframes lthigh{to{transform:rotate(10deg)}}@keyframes rthigh{to{transform:rotate(-10deg)}}@keyframes lcrus{to{left:-60%}}@keyframes rcrus{to{right:25%}}@keyframes lshoe{to{right:80%}}@keyframes rshoe{to{right:-10%}}@keyframes shadow{to{transform:scaleX(1.2)}}@keyframes intro{from{transform:scale(.25)}to{transform:scale(1)}}@keyframes bg-color{0%{background-color:rgba(255,255,255,.8)}20%{background-color:rgba(27,231,214,.8)}40%{background-color:rgba(52,231,27,.8)}60%{background-color:rgb(255 230 0 / .7)}80%{background-color:rgba(231,27,37,.6)}100%{background-color:#fff}}footer,main{display:none}
+    </style>
+    <title>404 - Page</title>
+</head>
+
+<body>
+    <main>
+        
+        <div class="coffin">
+            <div class="cover"></div>
+            <div class="base">
+                <div class="beam"></div>
+                <div class="column"><div id="decor"></div></div>
+                <div class="beam"></div>
+            </div>
+        </div>
+        <div class="man man1">
+            <div class="hat"></div>
+            <div class="head">
+                <div class="sunglass">
+                    <div class="s1"></div>
+                    <div class="bar"></div>
+                    <div class="s2"></div>
+                </div>
+                <div class="tete"><div class="mouth"></div></div>
+            </div>
+            <div class="upper-body">
+                <div class="arm left-arm">
+                    <div class="upper-arm"></div>
+                    <div class="forearm"><div class="hand"></div></div>
+                </div>
+                <div class="arm right-arm">
+                    <div class="upper-arm"></div>
+                    <div class="forearm"><div class="hand"></div></div>
+                </div>
+                <div class="shirt">
+                    <span id="flag">🇬</span>
+                </div>
+            </div>
+            <div class="lower-body">
+                <div class="leg left-leg">
+                    <div class="thigh"></div>
+                    <div class="crus"></div>
+                    <div class="shoe"></div>
+                </div>
+                <div class="leg right-leg">
+                    <div class="thigh"></div>
+                    <div class="crus"></div>
+                    <div class="shoe"></div>
+                </div>
+            </div>
+        </div>
+        <div class="man man2">
+            <div class="hat"></div>
+            <div class="head">
+                <div class="sunglass">
+                    <div class="s1"></div>
+                    <div class="bar"></div>
+                    <div class="s2"></div>
+                </div>
+                <div class="tete"><div class="mouth"></div></div>
+            </div>
+            <div class="upper-body">
+                <div class="arm left-arm">
+                    <div class="upper-arm"></div>
+                    <div class="forearm"><div class="hand"></div></div>
+                </div>
+                <div class="arm right-arm">
+                    <div class="upper-arm"></div>
+                    <div class="forearm"><div class="hand"></div></div>
+                </div>
+                <div class="shirt">
+                    <span id="flag">🇬</span>
+                </div>
+            </div>
+            <div class="lower-body">
+                <div class="leg left-leg">
+                    <div class="thigh"></div>
+                    <div class="crus"></div>
+                    <div class="shoe"></div>
+                </div>
+                <div class="leg right-leg">
+                    <div class="thigh"></div>
+                    <div class="crus"></div>
+                    <div class="shoe"></div>
+                </div>
+            </div>
+        </div>
+        <div class="shadow"></div>
+    </main>
+    <footer>
+        <a href="/scanner">Functionality is coming soon "{{ip}}", click here to check out xss scanner</a>
+    </footer>
+    <div class="loader">Loading...</div>
+    <audio src="https://www.dropbox.com/s/85arqxxxab7k0n7/coffin%20meme%20song.mp3?dl=1" loop>Oops something's wrong</audio>
+    <script>
+        // variables
+        const aud = document.getElementsByTagName("audio")[0];
+        const main = document.getElementsByTagName("main")[0];
+        const footer = document.getElementsByTagName("footer")[0];
+        const load = document.getElementsByClassName("loader")[0];
+        const bo = document.body;
+        // functions
+        window.onload = (event) => {
+	
+    bo.style.animation = "bg-color 10s ease 5s infinite";
+           main.style.display = "block"; 
+           main.style.animation = "intro 6s ease";
+           footer.style.display = "block";
+           load.style.display="none";
+           aud.play();
+};
+        //showtime
+        aud.addEventListener("canplaythrough", showtime);
+    </script>
+</body>
+</html>
